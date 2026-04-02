@@ -71,9 +71,16 @@ Use the included script to create or update labels in the GitHub repository.
 Requirements:
 
 - `python3`
-- a GitHub personal access token with repository administration rights
+- either GitHub CLI authenticated with `gh auth login`, or a `GITHUB_TOKEN`
 
 Example:
+
+```bash
+cd /Users/willmachi/Documents/willmachi/ezeala-product-bug
+python3 scripts/sync_labels.py --repo your-org/ezeala-product-bug
+```
+
+Fallback example if you prefer an explicit token:
 
 ```bash
 cd /Users/willmachi/Documents/willmachi/ezeala-product-bug

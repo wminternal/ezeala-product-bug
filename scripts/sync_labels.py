@@ -3,6 +3,8 @@
 import argparse
 import json
 import os
+import shutil
+import subprocess
 import sys
 import urllib.error
 import urllib.parse
@@ -69,9 +71,23 @@ def get_existing_labels(repo, token):
 
 def ensure_token():
     token = os.environ.get("GITHUB_TOKEN")
-    if not token:
-        raise RuntimeError("GITHUB_TOKEN is required")
-    return token
+    if token:
+        return token
+
+    gh_path = shutil.which("gh")
+    if gh_path:
+        result = subprocess.run(
+            [gh_path, "auth", "token"],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode == 0:
+            gh_token = result.stdout.strip()
+            if gh_token:
+                return gh_token
+
+    raise RuntimeError("Authentication required. Set GITHUB_TOKEN or login via `gh auth login`.")
 
 
 def sync_labels(repo, labels_file, dry_run):
