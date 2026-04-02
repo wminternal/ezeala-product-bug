@@ -76,20 +76,6 @@ Requirements:
 - `python3`
 - either GitHub CLI authenticated with `gh auth login`, or a `GITHUB_TOKEN`
 
-Example:
-
-```bash
-cd /Users/willmachi/Documents/willmachi/ezeala-product-bug
-python3 scripts/sync_labels.py --repo your-org/ezeala-product-bug
-```
-
-Fallback example if you prefer an explicit token:
-
-```bash
-cd /Users/willmachi/Documents/willmachi/ezeala-product-bug
-GITHUB_TOKEN=your_token_here python3 scripts/sync_labels.py --repo your-org/ezeala-product-bug
-```
-
 Optional flags:
 
 - `--labels-file labels.json`
