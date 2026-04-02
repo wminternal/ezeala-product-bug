@@ -1,0 +1,117 @@
+[
+  {
+    "name": "bug",
+    "color": "d73a4a",
+    "description": "Confirmed or suspected product bug"
+  },
+  {
+    "name": "regression",
+    "color": "b60205",
+    "description": "Previously working behavior has regressed"
+  },
+  {
+    "name": "needs-triage",
+    "color": "fbca04",
+    "description": "Awaiting initial triage"
+  },
+  {
+    "name": "confirmed",
+    "color": "0e8a16",
+    "description": "Reproduced and confirmed by the team"
+  },
+  {
+    "name": "in-progress",
+    "color": "1d76db",
+    "description": "Actively being worked on"
+  },
+  {
+    "name": "fixed",
+    "color": "5319e7",
+    "description": "Fix merged but not yet released"
+  },
+  {
+    "name": "released",
+    "color": "0052cc",
+    "description": "Fix released to users"
+  },
+  {
+    "name": "critical",
+    "color": "7f0000",
+    "description": "Severe outage or data-loss risk"
+  },
+  {
+    "name": "high",
+    "color": "d93f0b",
+    "description": "High-impact user-facing issue"
+  },
+  {
+    "name": "medium",
+    "color": "fbca04",
+    "description": "Moderate impact"
+  },
+  {
+    "name": "low",
+    "color": "c2e0c6",
+    "description": "Minor impact or cosmetic issue"
+  },
+  {
+    "name": "frontend",
+    "color": "a2eeef",
+    "description": "Frontend issue"
+  },
+  {
+    "name": "backend",
+    "color": "bfd4f2",
+    "description": "Backend issue"
+  },
+  {
+    "name": "api",
+    "color": "c5def5",
+    "description": "API contract or endpoint issue"
+  },
+  {
+    "name": "ai",
+    "color": "7057ff",
+    "description": "AI workflow or model behavior issue"
+  },
+  {
+    "name": "auth",
+    "color": "f9d0c4",
+    "description": "Authentication or access issue"
+  },
+  {
+    "name": "billing",
+    "color": "e99695",
+    "description": "Billing or subscription issue"
+  },
+  {
+    "name": "helpdesk",
+    "color": "006b75",
+    "description": "Helpdesk or ticket workflow issue"
+  },
+  {
+    "name": "dashboard",
+    "color": "0b7285",
+    "description": "Dashboard issue"
+  },
+  {
+    "name": "filing",
+    "color": "5319e7",
+    "description": "Filing or compliance submission issue"
+  },
+  {
+    "name": "documents",
+    "color": "0366d6",
+    "description": "Document management issue"
+  },
+  {
+    "name": "settings",
+    "color": "6f42c1",
+    "description": "Settings or user preferences issue"
+  },
+  {
+    "name": "infrastructure",
+    "color": "5319e7",
+    "description": "Deployment, hosting, or environment issue"
+  }
+]

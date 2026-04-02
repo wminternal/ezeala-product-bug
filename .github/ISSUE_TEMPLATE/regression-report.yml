@@ -1,0 +1,101 @@
+name: Regression report
+description: Report a bug where previously working behavior has broken.
+title: "REGRESSION-XXX: "
+labels:
+  - bug
+  - regression
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form when a previously working product behavior has stopped working.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: Quote refresh used to preserve stored quotes but now consumes usage unexpectedly
+    validations:
+      required: true
+
+  - type: input
+    id: found_in_version
+    attributes:
+      label: Found in version
+      placeholder: v1.4.0
+    validations:
+      required: true
+
+  - type: input
+    id: last_known_working_version
+    attributes:
+      label: Last known working version
+      placeholder: v1.3.8
+    validations:
+      required: true
+
+  - type: textarea
+    id: behavior_change
+    attributes:
+      label: What changed?
+      placeholder: Describe what used to happen and what happens now.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open a ticket with stored quotes
+        2. View the quotes
+        3. Compare usage count before and after
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - critical
+        - high
+        - medium
+        - low
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Product area
+      options:
+        - frontend
+        - backend
+        - api
+        - ai
+        - helpdesk
+        - dashboard
+        - filing
+        - documents
+        - settings
+        - infrastructure
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: production, Chrome, macOS, authenticated landlord account
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Screenshots, logs, linked PRs, or suspect release notes.
+    validations:
+      required: false

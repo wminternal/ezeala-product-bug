@@ -1,0 +1,129 @@
+name: Bug report
+description: Report a product bug affecting EzeAla users.
+title: "BUG-XXX: "
+labels:
+  - bug
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for product bugs only.
+
+        Do not include secrets, private tokens, or customer-sensitive information.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: Short description of the bug.
+      placeholder: Manual ticket creation does not appear on the board immediately
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Provide exact steps.
+      placeholder: |
+        1. Go to Helpdesk
+        2. Click Create Ticket
+        3. Fill in the form and submit
+        4. Observe the board state
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected behavior
+      placeholder: The new ticket should appear on the board immediately after creation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: Actual behavior
+      placeholder: The modal closes but the ticket is missing until a refresh.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - critical
+        - high
+        - medium
+        - low
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Product area
+      options:
+        - frontend
+        - backend
+        - api
+        - ai
+        - auth
+        - billing
+        - helpdesk
+        - dashboard
+        - filing
+        - documents
+        - settings
+        - infrastructure
+    validations:
+      required: true
+
+  - type: input
+    id: found_in_version
+    attributes:
+      label: Found in version
+      description: Product version where the bug was observed.
+      placeholder: v1.4.0
+    validations:
+      required: true
+
+  - type: input
+    id: last_known_working_version
+    attributes:
+      label: Last known working version
+      description: Optional, but helpful for regressions.
+      placeholder: v1.3.9
+    validations:
+      required: false
+
+  - type: dropdown
+    id: regression
+    attributes:
+      label: Is this a regression?
+      options:
+        - unknown
+        - yes
+        - no
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, OS, device, account type, or other relevant context.
+      placeholder: macOS, Chrome 135, production environment, landlord account
+    validations:
+      required: true
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots or logs
+      description: Paste links or add screenshots if available.
+    validations:
+      required: false
