@@ -60,7 +60,10 @@ Recommended issue title format:
 - `.github/ISSUE_TEMPLATE/bug-report.yml`: standard product bug form
 - `.github/ISSUE_TEMPLATE/regression-report.yml`: regression-focused form
 - `.github/ISSUE_TEMPLATE/config.yml`: GitHub issue form configuration
+- `SECURITY.md`: public security reporting guidance
 - `docs/versioning-and-triage.md`: release, versioning, and triage process
+- `docs/REPOSITORY_POLICY.md`: public/private repository visibility policy
+- `docs/public-repo-checklist.md`: approval checklist for public repositories
 - `labels.json`: suggested GitHub label import manifest
 - `scripts/sync_labels.py`: sync labels from `labels.json` to GitHub
 
